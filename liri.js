@@ -95,7 +95,6 @@ function getSpotify(songTitle) {
     if (songTitle === '' || !songTitle) {
         songTitle = 'This is America';
         console.log("We couldn't find what you were looking for but we found this one instead. Next time try to write a song title.");
-        
     }
     spotify.search({ type: 'track', query: songTitle }, function(error, data) {
         if (error) {
@@ -132,9 +131,7 @@ function getMovie(movieTitle) {
             rated: movieData.Rated,
             imdbRating: movieData.imdbRating,
             tomatoes: movieData.Ratings[1],
-            plot: movieData.Plot,
-            
-            
+            plot: movieData.Plot 
         };
         console.log(movie);
         log(movie);
@@ -146,5 +143,3 @@ function log(data) {
         console.log('This information has been logged in the log.txt file');
     });
 }
-
-// readme
