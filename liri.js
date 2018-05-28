@@ -65,7 +65,7 @@ function getMyTweets() {
     client.get('statuses/user_timeline', params, function(error, tweets, response) {
         if (!error) {
             var myTweets = [];
-            for (var i = 0; i < tweets.length; i++) {
+            for (var i = 0; i < 20; i++) {
                 var myTweet = {
                     text: tweets[i].text,
                     created: tweets[i].created_at
